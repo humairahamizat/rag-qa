@@ -44,6 +44,14 @@ Answer + Sources
 | LLM | Groq llama-3.3-70b-versatile | Free tier, fast inference, strong instruction-following |
 | Top-k | 5 chunks | Enough context without overloading the prompt |
 
+## Assumptions Made
+
+- Documents are in plain `.txt` format under `data/agora/fulltext/`
+- Questions are in English (embedding model optimised for English)
+- Groq free tier is sufficient for evaluation purposes
+- 500-word chunks are appropriate for this document type
+- Top 5 retrieved chunks provide enough context for accurate answers
+
 ## Limitations
 
 - **No reranking:** Retrieved chunks are ranked purely by embedding similarity. A cross-encoder reranker would improve precision.
